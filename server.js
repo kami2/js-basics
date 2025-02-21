@@ -1,3 +1,5 @@
+import {mockup_json} from "./mockup";
+
 const http = require("http");
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -9,9 +11,9 @@ const requestListener = function (req, res) {
             res.writeHead(200);
             res.end('{"message": "Hello World!"}');
             break
-        case '/login':
+        case '/data':
             res.writeHead(200);
-            res.end('{"message": "Login Page"}');
+            res.end(mockup_json);
             break
     }
 };

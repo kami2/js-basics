@@ -1,10 +1,13 @@
 {
-  "name": "js-ts learning project",
+  "name": "js-ts-learning-project",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "mongodb": "^6.13.1"
+  }
 }
