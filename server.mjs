@@ -1,6 +1,5 @@
-import {mockup_json} from "./mockup";
+import http from "http";
 
-const http = require("http");
 const hostname = '127.0.0.1';
 const port = 3000;
 
@@ -13,7 +12,7 @@ const requestListener = function (req, res) {
             break
         case '/data':
             res.writeHead(200);
-            res.end(mockup_json);
+            res.end('{"message": "mockup here"}');
             break
     }
 };
