@@ -1,4 +1,5 @@
 import http from "http";
+import { mockup_json } from "./mockup.mjs";
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -12,12 +13,12 @@ const requestListener = function (req, res) {
             break
         case '/data':
             res.writeHead(200);
-            res.end('{"message": "mockup here"}');
+            res.end(mockup_json);
             break
     }
 };
 
 const server = http.createServer(requestListener);
 server.listen(port, hostname, () => {
-    console.log(`Server is running on https://${hostname}:${port}`);
+    console.log(`Server is running on http://${hostname}:${port}`);
 });

@@ -1,5 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const client = MongoClient.connect(process.env.MONGODB_URI);
+console.log(process.env.MONGODB_URI);
+const client = new MongoClient(process.env.MONGODB_URI);
 
-await client.connect()
+await client.connect();
